@@ -1,85 +1,26 @@
 package br.mackenzie.ps2.api.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "professores")
 public class Professor {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	long id;
+	@Column(nullable = false)
 	String nome;
+	@Column(nullable = false, length = 10)
 	String matricula;
+	@Column(nullable = false)
 	String area;
 	
-	public Professor() {}
-	
-	
-	public Professor(long id, String nome, String matricula, String area) {
-		this.id = id;
-		this.nome = nome;
-		this.matricula = matricula;
-		this.area = area;
-	}
-
-
-	/**
-	 * @return the id
-	 */
-	public long getId() {
-		return id;
-	}
-
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(long id) {
-		this.id = id;
-	}
-
-
-	/**
-	 * @return the nome
-	 */
-	public String getNome() {
-		return nome;
-	}
-
-
-	/**
-	 * @param nome the nome to set
-	 */
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-
-	/**
-	 * @return the matricula
-	 */
-	public String getMatricula() {
-		return matricula;
-	}
-
-
-	/**
-	 * @param matricula the matricula to set
-	 */
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-
-
-	/**
-	 * @return the area
-	 */
-	public String getArea() {
-		return area;
-	}
-
-
-	/**
-	 * @param area the area to set
-	 */
-	public void setArea(String area) {
-		this.area = area;
-	}
-	
-	
-
+	public long getId() { return id; }
+	public void setId(long id) { this.id = id; }
+	public String getNome() { return nome; }
+	public void setNome(String nome) { this.nome = nome; }
+	public String getMatricula() { return matricula; }
+	public void setMatricula(String matricula) { this.matricula = matricula; }
+	public String getArea() { return area; }
+	public void setArea(String area) { this.area = area; }
 }
