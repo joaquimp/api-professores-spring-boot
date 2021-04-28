@@ -1,16 +1,16 @@
-package br.mackenzie.ps2.api.resource;
+package br.mackenzie.ps2.api.controller;
 
 import java.util.*;
 import org.springframework.web.bind.annotation.*;
 import br.mackenzie.ps2.api.entity.Professor;
 
 @RestController
-public class ProfessorResource {
+public class ProfessorController {
 	
 	private List<Professor> profs;
 	private int countIds;
 	
-	public ProfessorResource() {
+	public ProfessorController() {
 		
 		this.countIds = 0;
 		
